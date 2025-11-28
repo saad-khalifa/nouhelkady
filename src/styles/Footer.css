@@ -1,0 +1,316 @@
+/* تنسيق الفوتر الاحترافي */
+.footer {
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+  color: #fff;
+  padding: 60px 20px 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #0ea5e9, #8b5cf6, #ec4899);
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.footer-info {
+  flex: 1;
+  min-width: 280px;
+}
+
+.footer-info h3 {
+  font-size: 1.5rem;
+  margin-bottom: 25px;
+  color: #0ea5e9;
+  font-weight: 700;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.footer-info h3::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, #0ea5e9, #8b5cf6);
+  border-radius: 2px;
+}
+
+.footer-info ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-info ul li {
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.95rem;
+  transition: transform 0.3s ease;
+}
+
+.footer-info ul li:hover {
+  transform: translateX(-5px);
+}
+
+.footer-info ul li strong {
+  color: #0ea5e9;
+  min-width: 120px;
+  font-weight: 600;
+}
+
+.footer-info ul li a {
+  color: #e0e0e0;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.3s ease;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.footer-info ul li a:hover {
+  background: rgba(14, 165, 233, 0.1);
+  transform: scale(1.05);
+}
+
+.footer-info ul li a svg {
+  font-size: 1.2rem;
+  transition: transform 0.3s ease;
+}
+
+.footer-info ul li a:hover svg {
+  transform: scale(1.2);
+}
+
+/* تنسيق الروابط */
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links ul li {
+  margin-bottom: 12px;
+}
+
+.footer-links ul li a {
+  color: #e0e0e0;
+  text-decoration: none;
+  font-size: 0.95rem;
+  padding: 8px 15px;
+  display: inline-block;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.footer-links ul li a:hover {
+  background: rgba(14, 165, 233, 0.2);
+  border-color: #0ea5e9;
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(14, 165, 233, 0.3);
+}
+
+/* حقوق النشر */
+.footer-copyright {
+  text-align: center;
+  margin-top: 50px;
+  padding-top: 30px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  font-size: 0.9rem;
+  color: #999;
+}
+
+.footer-copyright p {
+  margin: 0;
+  letter-spacing: 0.5px;
+}
+
+/* استجابة للشاشات المتوسطة */
+@media (max-width: 768px) {
+  .footer {
+    padding: 40px 15px 15px;
+  }
+
+  .footer-container {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .footer-info {
+    min-width: 100%;
+  }
+
+  .footer-info h3 {
+    font-size: 1.3rem;
+    text-align: center;
+  }
+
+  .footer-info h3::after {
+    right: 50%;
+    transform: translateX(50%);
+  }
+
+  .footer-info ul li {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+  }
+
+  .footer-info ul li strong {
+    min-width: auto;
+  }
+
+  .footer-links {
+    width: 100%;
+  }
+
+  .footer-links ul li a {
+    display: block;
+    text-align: center;
+  }
+
+  .footer-copyright {
+    margin-top: 30px;
+    padding-top: 20px;
+    font-size: 0.85rem;
+  }
+}
+
+/* استجابة للشاشات الصغيرة */
+@media (max-width: 480px) {
+  .footer {
+    padding: 30px 10px 10px;
+  }
+
+  .footer-info h3 {
+    font-size: 1.2rem;
+  }
+
+  .footer-info ul li {
+    font-size: 0.9rem;
+    margin-bottom: 12px;
+  }
+
+  .footer-info ul li a {
+    font-size: 0.9rem;
+    padding: 4px 8px;
+  }
+
+  .footer-links ul li a {
+    font-size: 0.9rem;
+    padding: 6px 12px;
+  }
+}
+
+/* تأثيرات الأيقونات */
+.footer-info ul li a svg {
+  filter: drop-shadow(0 0 5px currentColor);
+}
+
+/* ألوان خاصة للأيقونات */
+.footer-info ul li a[href*="whatsapp"] svg {
+  color: #25D366;
+}
+
+.footer-info ul li a[href*="facebook"] svg {
+  color: #1877F2;
+}
+
+.footer-info ul li a[href*="tiktok"] svg {
+  color: #ff0050;
+}
+
+.footer-info ul li a[href*="youtube"] svg {
+  color: #FF0000;
+}
+
+.footer-info ul li a[href*="instagram"] svg {
+  color: #E4405F;
+}
+
+/* تأثير متحرك للخلفية */
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.footer {
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+  background-size: 200% 200%;
+  animation: gradientShift 15s ease infinite;
+}
+/* تنسيق الأيقونات في القسم الاجتماعي */
+.social-media {
+  display: flex;
+  gap: 15px; /* إضافة المسافة بين الأيقونات */
+}
+
+.social-icon {
+  font-size: 1.5rem;
+  transition: transform 0.3s ease;
+}
+
+.social-icon:hover {
+  transform: scale(1.1);
+}
+
+/* إضافة تأثير على الأيقونات عند التمرير */
+.social-icon:hover {
+  filter: brightness(1.2);
+}
+/* تنسيق عنصر "تواصل معنا" */
+.contact-info .contact-item {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* إضافة مسافة بين الأيقونة والرابط */
+  margin-bottom: 15px;
+}
+
+.contact-info .contact-item a {
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.contact-icon{
+    color: #0D6EFD;
+}
+.contact-info span{
+    color: #0D6EFD;
+}

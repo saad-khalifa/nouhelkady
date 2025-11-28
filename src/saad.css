@@ -1,0 +1,27 @@
+/* ملف CustomNavbar.css */
+
+/* جعل الـ Navbar ثابتًا أثناء التمرير */
+.sticky-navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  width: 100%;
+  transition: top 0.3s;
+}
+
+/* تغيير اللون الخلفي عند التمرير */
+.sticky-navbar.navbar-scrolled {
+  background-color: rgba(0, 0, 0, 0.8);  /* خلفية داكنة مع شفافية */
+  transition: background-color 0.3s ease;
+}
+
+/* التأثيرات على الشعار */
+.sticky-navbar img {
+  transition: transform 0.3s ease-in-out;
+}
+
+.sticky-navbar.navbar-scrolled img {
+  transform: scale(1.1); /* تكبير الشعار عند التمرير */
+}

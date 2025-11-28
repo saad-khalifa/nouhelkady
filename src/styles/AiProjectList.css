@@ -1,0 +1,315 @@
+/* الخلفية العامة */
+.ai-project-list {
+  min-height: 100vh;
+  background: linear-gradient(135deg, rgb(16, 29, 63) 0%, rgb(25, 42, 86) 100%);
+  padding: 60px 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* تأثير الخلفية المتحركة */
+.ai-project-list::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: 
+    radial-gradient(circle at 20% 50%, rgba(120, 119, 198, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 80% 80%, rgba(99, 102, 241, 0.1) 0%, transparent 50%);
+  animation: backgroundMove 20s ease-in-out infinite;
+  z-index: 0;
+}
+
+@keyframes backgroundMove {
+  0%, 100% { transform: translate(0, 0); }
+  50% { transform: translate(20px, 20px); }
+}
+
+/* قسم العنوان */
+.header-section {
+  text-align: center;
+  margin-bottom: 60px;
+  position: relative;
+  z-index: 1;
+  animation: fadeInDown 0.8s ease;
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.header-icon {
+  font-size: 4rem;
+  color: #6366f1;
+  margin-bottom: 20px;
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-15px); }
+}
+
+.main-title {
+  font-size: 3rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, #fff 0%, #a5b4fc 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 10px;
+  text-shadow: 0 0 30px rgba(99, 102, 241, 0.3);
+}
+
+.subtitle {
+  color: #cbd5e1;
+  font-size: 1.2rem;
+  font-weight: 300;
+}
+
+/* حاوية Swiper */
+.projects-swiper {
+  padding: 40px 20px 80px;
+  position: relative;
+  z-index: 1;
+}
+
+/* بطاقة المشروع */
+.project-card {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  overflow: hidden;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  height: 100%;
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 30px 80px rgba(99, 102, 241, 0.4);
+  border-color: rgba(99, 102, 241, 0.5);
+}
+
+/* الصورة */
+.card-image {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.project-card:hover .card-image {
+  transform: scale(1.1);
+}
+
+/* محتوى البطاقة */
+.card-content {
+  padding: 25px;
+  background: rgba(16, 29, 63, 0.8);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.card-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #fff;
+  margin: 0;
+  text-align: center;
+  line-height: 1.4;
+  letter-spacing: 0.5px;
+  display: block;
+  width: 100%;
+}
+
+/* زر عرض التفاصيل */
+.view-details-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 12px 30px;
+  background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 30px rgba(99, 102, 241, 0.3);
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+.view-details-btn:hover {
+  background: linear-gradient(135deg, #8b5cf6 0%, #6366f1 100%);
+  box-shadow: 0 15px 40px rgba(99, 102, 241, 0.5);
+  transform: scale(1.05);
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.view-details-btn:active {
+  transform: scale(0.98);
+}
+
+.eye-icon {
+  font-size: 1.2rem;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.6; }
+}
+
+/* أزرار التنقل */
+.projects-swiper .swiper-button-next,
+.projects-swiper .swiper-button-prev {
+  color: #6366f1;
+  background: rgba(255, 255, 255, 0.1);
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  backdrop-filter: blur(10px);
+  border: 2px solid rgba(99, 102, 241, 0.3);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.projects-swiper .swiper-button-next:hover,
+.projects-swiper .swiper-button-prev:hover {
+  background: rgba(99, 102, 241, 0.3);
+  transform: scale(1.1);
+  border-color: rgba(99, 102, 241, 0.6);
+}
+
+.projects-swiper .swiper-button-next::after,
+.projects-swiper .swiper-button-prev::after {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+/* نقاط التنقل */
+.projects-swiper .swiper-pagination-bullet {
+  background: rgba(255, 255, 255, 0.5);
+  width: 12px;
+  height: 12px;
+  opacity: 1;
+  transition: all 0.3s ease;
+}
+
+.projects-swiper .swiper-pagination-bullet-active {
+  background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+  width: 30px;
+  border-radius: 10px;
+}
+
+/* حالة التحميل */
+.loading-container,
+.error-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, rgb(16, 29, 63) 0%, rgb(25, 42, 86) 100%);
+  color: white;
+}
+
+.spinner-icon {
+  font-size: 4rem;
+  color: #6366f1;
+  animation: spin 1s linear infinite;
+  margin-bottom: 20px;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.loading-container p,
+.error-container p {
+  font-size: 1.5rem;
+  color: #cbd5e1;
+}
+
+/* الاستجابة للشاشات */
+@media (max-width: 1024px) {
+  .main-title {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .ai-project-list {
+    padding: 40px 15px;
+  }
+  
+  .header-icon {
+    font-size: 3rem;
+  }
+  
+  .main-title {
+    font-size: 2rem;
+  }
+  
+  .subtitle {
+    font-size: 1rem;
+  }
+  
+  .card-image {
+    height: 220px;
+  }
+  
+  .card-title {
+    font-size: 1.3rem;
+  }
+  
+  .view-details-btn {
+    padding: 10px 25px;
+    font-size: 0.95rem;
+  }
+  
+  .projects-swiper .swiper-button-next,
+  .projects-swiper .swiper-button-prev {
+    width: 45px;
+    height: 45px;
+  }
+  
+  .projects-swiper .swiper-button-next::after,
+  .projects-swiper .swiper-button-prev::after {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .projects-swiper {
+    padding: 20px 10px 60px;
+  }
+  
+  .card-content {
+    padding: 20px;
+    gap: 15px;
+  }
+  
+  .view-details-btn {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+}

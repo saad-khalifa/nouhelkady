@@ -1,0 +1,9 @@
+# https://www.robotstxt.org/robotstxt.html
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /login
+Disallow: /register
+
+# Sitemaps
+Sitemap: https://nouhelkady.nouhelkady.com/sitemap.xml

@@ -1,0 +1,25 @@
+/* ProjectsEditing.css */
+.projects-container {
+  padding: 20px;
+}
+
+.project-card {
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.project-card img {
+  max-height: 200px;
+  object-fit: cover;
+}
+
+.project-card .btn {
+  margin-top: 10px;
+  text-align: center;
+}
+
+.project-card .card-body {
+  background-color: #f8f9fa;
+}
