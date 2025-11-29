@@ -4,6 +4,10 @@ import '../styles/Footer.css';
 import { Link } from 'react-router-dom';
 
 const Footer = () => {
+  const handleDesignerClick = () => {
+    window.open('tel:+963964367942');
+  };
+
   return (
     <footer className="footer">
       <div className="footer-container">
@@ -66,33 +70,15 @@ const Footer = () => {
       <div className="rights-section">
         <div className="rights-container">
           <p className="rights-text">
-            جميع الحقوق محفوظة &copy; {new Date().getFullYear()} لـ 
-            <span className="rights-name"> سعد الخليفة</span>
+            جميع الحقوق محفوظة &copy; {new Date().getFullYear()} لـ  
+            <span 
+              className="rights-name bold-name" 
+              onClick={handleDesignerClick}
+              style={{ cursor: 'pointer' }}
+            >
+              سعد الخليفة
+            </span>
           </p>
-          <div className="designer-contact">
-            <a 
-              style={{ color:'white', textDecoration:'none', display: 'flex', alignItems: 'center', gap: '8px', fontSize: "15px" }}
-              href="https://wa.me/963964367942" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="designer-whatsapp"
-              aria-label="تواصل مع المصمم عبر واتساب"
-            >
-              <span>963964367942+</span>
-              <FaWhatsapp />
-            </a>
-            <a 
-              style={{ color:'white', textDecoration:'none', display: 'flex', alignItems: 'center', gap: '8px', fontSize: "15px", marginRight: '15px' }}
-              href="https://www.facebook.com/saad.al.khalifa.705540" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="designer-facebook"
-              aria-label="تابع المصمم على فيسبوك"
-            >
-              <span>فيسبوك</span>
-              <FaFacebook />
-            </a>
-          </div>
         </div>
       </div>
     </footer>

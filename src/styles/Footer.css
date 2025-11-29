@@ -400,3 +400,34 @@
 .contact-info span{
     color: #0D6EFD;
 }
+/* قسم الحقوق في الوسط */
+.rights-section {
+  width: 100%;
+  text-align: center;
+  margin-top: 40px;
+  padding-top: 30px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.rights-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.rights-text {
+  font-size: 1rem;
+  color: #e0e0e0;
+  margin: 0;
+}
+.bold-name {
+  font-weight: bold;
+  color: #0ea5e9;
+  margin-right: 5px;
+  transition: all 0.3s ease;
+  padding: 2px 5px;
+  border-radius: 3px;
+}
+.bold-name:hover {
+  background: rgba(14, 165, 233, 0.1);
+  transform: scale(1.05);
+}
