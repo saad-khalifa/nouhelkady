@@ -83,6 +83,13 @@ const FullScreenImage = () => {
     window.open(whatsappUrl, '_blank');
   };
 
+  const handleFixedWhatsAppClick = () => {
+    const phoneNumber = '+201140278609';
+    const message = 'مرحباً، أريد التواصل معكم';
+    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+    window.open(whatsappUrl, '_blank');
+  };
+
   return (
     <div className="fullscreen-wrapper">
       {/* القسم الأول: الصورة بعرض كامل */}
@@ -288,6 +295,22 @@ const FullScreenImage = () => {
           <div className="shape shape-2"></div>
           <div className="shape shape-3"></div>
         </div>
+      </div>
+
+      {/* أيقونة واتساب الثابتة */}
+      <div className="fixed-whatsapp-button" onClick={handleFixedWhatsAppClick}>
+        <div className="whatsapp-icon-wrapper">
+          <svg 
+            viewBox="0 0 32 32" 
+            className="whatsapp-icon"
+            fill="currentColor"
+          >
+            <path d="M16 0c-8.837 0-16 7.163-16 16 0 2.825 0.737 5.607 2.137 8.048l-2.137 7.952 7.933-2.127c2.42 1.37 5.173 2.127 8.067 2.127 8.837 0 16-7.163 16-16s-7.163-16-16-16zM16 29.467c-2.482 0-4.908-0.646-7.07-1.87l-0.507-0.292-5.25 1.408 1.417-5.253-0.315-0.517c-1.332-2.197-2.042-4.738-2.042-7.363 0-7.51 6.11-13.62 13.62-13.62s13.62 6.11 13.62 13.62c0 7.51-6.11 13.62-13.62 13.62z"/>
+            <path d="M23.022 19.48c-0.337-0.169-1.997-0.986-2.307-1.099-0.31-0.112-0.535-0.169-0.76 0.169s-0.874 1.099-1.072 1.325c-0.198 0.225-0.395 0.253-0.732 0.084s-1.429-0.527-2.721-1.679c-1.006-0.897-1.685-2.005-1.883-2.342s-0.021-0.519 0.148-0.687c0.152-0.151 0.337-0.395 0.506-0.593s0.225-0.337 0.337-0.562c0.112-0.225 0.056-0.422-0.028-0.591s-0.76-1.833-1.042-2.509c-0.274-0.659-0.553-0.57-0.76-0.58-0.197-0.01-0.422-0.012-0.647-0.012s-0.591 0.084-0.901 0.422c-0.31 0.337-1.183 1.157-1.183 2.821s1.211 3.272 1.379 3.497c0.169 0.225 2.347 3.583 5.682 5.023 0.794 0.343 1.414 0.548 1.897 0.701 0.798 0.254 1.523 0.218 2.097 0.132 0.64-0.096 1.973-0.807 2.253-1.586s0.281-1.446 0.197-1.586c-0.084-0.14-0.31-0.225-0.647-0.394z"/>
+          </svg>
+        </div>
+        <div className="whatsapp-pulse"></div>
+        <div className="whatsapp-pulse whatsapp-pulse-2"></div>
       </div>
     </div>
   );
