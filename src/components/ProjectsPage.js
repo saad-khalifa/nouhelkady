@@ -52,7 +52,7 @@ const ProjectsPage = () => {
     <div className="projects-list">
       <div className="header-section">
         <FaProjectDiagram className="header-icon" />
-        <h1 className="main-title">مشاريعنا المميزة</h1>
+        <h1 className="main-title">مشاريعنا في المونتاج</h1>
         <p className="subtitle">اكتشف أحدث مشاريعنا وإنجازاتنا</p>
       </div>
 

@@ -9,8 +9,8 @@ const Home = () => {
   return (
     <div>
       <FullScreenImage />
-      <ProjectsPage/>
       <AiProjectList/>
+      <ProjectsPage/>
       <Footer/>
       
     </div>

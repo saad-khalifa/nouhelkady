@@ -35,7 +35,7 @@
 .footer-info h3 {
   font-size: 1.5rem;
   margin-bottom: 25px;
-  color: #0ea5e9;
+  color: #f3f7f8;
   font-weight: 700;
   position: relative;
   padding-bottom: 10px;
@@ -154,6 +154,51 @@
   letter-spacing: 0.5px;
 }
 
+/* قسم المصمم - تصميم صغير وأنيق */
+.designer-section {
+  text-align: center;
+  margin-top: 20px;
+  padding: 15px;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.designer-text {
+  font-size: 0.85rem;
+  color: #999;
+  margin: 0;
+  letter-spacing: 0.5px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.designer-name {
+  color: #fff;
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+.designer-whatsapp-link {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  margin-right: 5px;
+  transition: all 0.3s ease;
+}
+
+.designer-whatsapp-icon {
+  font-size: 1.2rem;
+  color: #25D366;
+  transition: transform 0.3s ease;
+}
+
+.designer-whatsapp-link:hover .designer-whatsapp-icon {
+  transform: scale(1.3) rotate(15deg);
+  filter: drop-shadow(0 0 8px #25D366);
+}
+
 /* استجابة للشاشات المتوسطة */
 @media (max-width: 768px) {
   .footer {
@@ -203,6 +248,25 @@
     padding-top: 20px;
     font-size: 0.85rem;
   }
+
+  .designer-section {
+    margin-top: 15px;
+    padding: 12px;
+  }
+
+  .designer-text {
+    font-size: 0.8rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .designer-name {
+    font-size: 0.85rem;
+  }
+
+  .designer-whatsapp-icon {
+    font-size: 1.1rem;
+  }
 }
 
 /* استجابة للشاشات الصغيرة */
@@ -228,6 +292,25 @@
   .footer-links ul li a {
     font-size: 0.9rem;
     padding: 6px 12px;
+  }
+
+  .designer-section {
+    margin-top: 12px;
+    padding: 10px;
+  }
+
+  .designer-text {
+    font-size: 0.75rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .designer-name {
+    font-size: 0.8rem;
+  }
+
+  .designer-whatsapp-icon {
+    font-size: 1rem;
   }
 }
 
@@ -275,10 +358,11 @@
   background-size: 200% 200%;
   animation: gradientShift 15s ease infinite;
 }
+
 /* تنسيق الأيقونات في القسم الاجتماعي */
 .social-media {
   display: flex;
-  gap: 15px; /* إضافة المسافة بين الأيقونات */
+  gap: 15px;
 }
 
 .social-icon {
@@ -294,11 +378,12 @@
 .social-icon:hover {
   filter: brightness(1.2);
 }
+
 /* تنسيق عنصر "تواصل معنا" */
 .contact-info .contact-item {
   display: flex;
   align-items: center;
-  gap: 10px; /* إضافة مسافة بين الأيقونة والرابط */
+  gap: 10px;
   margin-bottom: 15px;
 }
 
@@ -311,6 +396,7 @@
 .contact-icon{
     color: #0D6EFD;
 }
+
 .contact-info span{
     color: #0D6EFD;
 }
